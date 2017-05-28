@@ -1,6 +1,6 @@
 {
   "name": "nodeswork-helloworld",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Hello world application of Nodeswork.",
   "main": "index.js",
   "scripts": {
@@ -23,7 +23,7 @@
   "homepage": "https://github.com/nodeswork/nodeswork-helloworld#readme",
   "dependencies": {
     "html-to-text": "^3.3.0",
-    "nodeswork": "~0.0.11",
+    "nodeswork": "~0.0.12",
     "nodeswork-utils": "0.0.2",
     "random-quote": "0.0.1"
   }

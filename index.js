@@ -8,8 +8,7 @@ nodeswork
   .config({
     server:       'http://localhost:28888',
     port:         28900,
-    appletId:     '592281f962a5ed86bda7c5b9',
-    appletToken:  'huoSposJhHaxCa0z'
+    appletId:     '592281f962a5ed86bda7c5b9'
   })
   .withComponent(nodeswork.Messager)
   .process(async function(ctx) {
