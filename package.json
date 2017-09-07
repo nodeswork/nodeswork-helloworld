@@ -22,8 +22,8 @@
   },
   "homepage": "https://github.com/nodeswork/nodeswork-helloworld#readme",
   "dependencies": {
-    "html-to-text": "^3.3.0",
-    "nodeswork": "~0.0.12",
+    "html-to-text": "3.3.0",
+    "nodeswork": "0.0.12",
     "nodeswork-utils": "0.0.2",
     "random-quote": "0.0.1"
   }
