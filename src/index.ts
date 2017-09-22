@@ -1,5 +1,7 @@
-import { kiws, applet } from 'nodeswork';
-import * as htmlToText  from 'html-to-text';
+import * as kiws       from '@nodeswork/kiws';
+import * as applet     from '@nodeswork/applet';
+
+import * as htmlToText from 'html-to-text';
 
 const randomQuote = require('random-quote');
 
