@@ -1,6 +1,6 @@
 {
   "name": "nodeswork-helloworld",
-  "version": "0.0.18",
+  "version": "0.0.19",
   "description": "Hello world application of Nodeswork.",
   "main": "dist/index.js",
   "scripts": {
