@@ -1,9 +1,11 @@
 import * as kiws       from '@nodeswork/kiws';
 import * as applet     from '@nodeswork/applet';
+import * as logger     from '@nodeswork/logger';
 
 import * as htmlToText from 'html-to-text';
 
 const randomQuote = require('random-quote');
+const LOG = logger.getLogger();
 
 @applet.WorkerProvider({})
 class QuoteWorker {
@@ -34,6 +36,8 @@ class QuoteWorker {
         result.err = e;
       }
     }
+
+    LOG.info('quote is executed', result);
 
     return result;
   }
