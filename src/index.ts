@@ -12,31 +12,30 @@ class QuoteWorker {
 
   @applet.Worker({})
   async quote() {
+    const result: any = {
+      status: 'ok',
+    };
+
     const quote = (await randomQuote())[0];
     const textContent = htmlToText.fromString(quote.content);
 
-    let status = 'ok';
-    let err = null;
+    result.quote = quote;
+    result.textContent = textContent;
 
     if (this.twitter == null) {
-      status = 'No twitter account';
+      result.status = 'No twitter account';
+    } else {
+      try {
+        result.tweetRespose = await this.twitter.tweet({
+          status: textContent,
+        });
+      } catch (e) {
+        result.status = 'tweet failed';
+        result.err = e;
+      }
     }
 
-    try {
-      await this.twitter.tweet({
-        status: textContent,
-      });
-    } catch (e) {
-      status = 'tweet failed';
-      err = e;
-    }
-
-    return {
-      status,
-      quote,
-      textContent,
-      err,
-    };
+    return result;
   }
 }
 
