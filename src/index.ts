@@ -12,7 +12,11 @@ class QuoteWorker {
 
   @kiws.Input() twitter: applet.TwitterAccount;
 
-  @applet.Worker({})
+  @applet.Worker({
+    name: 'Quote',
+    schedule: '0 * * * *',
+    default: true,
+  })
   async quote() {
     const result: any = {
       status: 'ok',
