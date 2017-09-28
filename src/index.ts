@@ -35,6 +35,7 @@ class QuoteWorker {
       status,
       quote,
       textContent,
+      err,
     };
   }
 }
