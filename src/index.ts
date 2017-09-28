@@ -15,9 +15,24 @@ class QuoteWorker {
     const quote = (await randomQuote())[0];
     const textContent = htmlToText.fromString(quote.content);
 
+    let status = 'ok';
+    let err = null;
+
+    if (this.twitter == null) {
+      status = 'No twitter account';
+    }
+
+    try {
+      this.twitter.tweet({
+        status: textContent,
+      });
+    } catch (e) {
+      status = 'tweet failed';
+      err = e;
+    }
+
     return {
-      status: 'done',
-      target: this.twitter,
+      status,
       quote,
       textContent,
     };
