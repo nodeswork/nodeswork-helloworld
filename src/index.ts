@@ -23,7 +23,7 @@ class QuoteWorker {
     }
 
     try {
-      this.twitter.tweet({
+      await this.twitter.tweet({
         status: textContent,
       });
     } catch (e) {
