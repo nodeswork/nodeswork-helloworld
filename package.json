@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/nodeswork/nodeswork-helloworld#readme",
   "dependencies": {
-    "@nodeswork/applet": "0.0.17",
+    "@nodeswork/applet": "0.0.18",
     "@types/html-to-text": "^1.4.31",
     "html-to-text": "3.3.0",
     "random-quote": "0.0.1"
