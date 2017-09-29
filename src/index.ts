@@ -37,7 +37,7 @@ class QuoteWorker {
         });
       } catch (e) {
         result.status = 'tweet failed';
-        result.err = e;
+        result.err = JSON.parse(JSON.stringify(e));
       }
     }
 
