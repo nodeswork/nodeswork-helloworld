@@ -38,6 +38,7 @@ class QuoteWorker {
       } catch (e) {
         result.status = 'tweet failed';
         result.err = JSON.parse(JSON.stringify(e));
+        console.log('tweet failed', e);
       }
     }
 
