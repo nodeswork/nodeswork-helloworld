@@ -14,7 +14,7 @@ class QuoteWorker {
 
   @applet.Worker({
     name: 'Quote',
-    schedule: '0 * * * * *',
+    schedule: '40 */4 * * * *',
     default: true,
   })
   async quote() {
