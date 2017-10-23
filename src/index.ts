@@ -14,7 +14,7 @@ class QuoteWorker {
 
   @applet.Worker({
     name: 'Quote',
-    schedule: '40 */4 * * * *',
+    schedule: '0 0 8 * * *',
     default: true,
   })
   async quote() {
@@ -38,7 +38,6 @@ class QuoteWorker {
       } catch (e) {
         result.status = 'tweet failed';
         result.err = JSON.parse(JSON.stringify(e));
-        console.log('tweet failed', e);
       }
     }
 
